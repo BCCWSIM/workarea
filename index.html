@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+<script src="https://unpkg.com/jspdf-autotable"></script>
 
 
 <!-- Header with image -->
@@ -23,7 +26,7 @@
         <img src="https://lh3.googleusercontent.com/d/19bi1iNE8JYD1kVJ3nGH0YevbPh-sdQ9b" class="logo1">
     </div>
     <div class="text-container">
-        <span class="w3-text-white" >Simulation Program</span>
+        <span class="w3-text-white" >Simulation<br>Program</span>
     </div>
 </div>
   <div class="w3-display-bottomright w3-center w3-padding-large">
@@ -46,7 +49,10 @@
       <a  id="reviewButton" class="w3-button w3-block w3-black">REVIEW<br>SELECTION</a>      
     </div>
     <div class="w3-col s3">
-      <a id="exportButton" class="w3-button w3-block w3-black"></a>
+      <a id="printPdf" class="w3-button w3-block w3-black">h</a>
+      <button id="">Print PDF</button>
+
+
     </div>
   </div>
 </div>
