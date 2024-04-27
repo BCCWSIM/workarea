@@ -7,7 +7,6 @@ let selectedItems = new Set();
 let isTableView = true;
 
 document.getElementById('toggleViewButton').addEventListener('click', toggleView);
-document.getElementById('exportButton').addEventListener('click', exportCSV);
 document.getElementById('clearSelectionButton').addEventListener('click', clearSelection);
 document.getElementById('reviewButton').addEventListener('click', reviewSelection);
 
@@ -34,9 +33,7 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
-
-// Simulate a click on the first tab
-document.getElementsByClassName("tablink")[0].click();
+document.getElementById("myLink").click();
 
 function displayTable(data) {
     const table = document.getElementById('csvTable');
@@ -298,17 +295,12 @@ function displayGallery(data) {
         gallery.appendChild(div);
     }
 }
-function exportCSV() {
-    const title = document.getElementById('titleInput').value;
-    const contactPerson = document.getElementById('contactPersonInput').value;
-    const startDateTime = document.getElementById('startDateTimeInput').value;
-    const endDateTime = document.getElementById('endDateTimeInput').value;
-    const selectedRows = Array.from(selectedItems).map(item => item.split(','));
-    const csvContent = 'data:text/csv;charset=utf-8,' + `Title,${title}\nContact Person,${contactPerson}\nStart Date & Time,${startDateTime}\nEnd Date & Time,${endDateTime}\nNumber of Items Selected,${selectedRows.length}\n` + [items[0], ...selectedRows].map(e => e.join(',')).join('\n');
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', 'export.csv');
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-}
+
+document.getElementById('printPdf').addEventListener('click', function() {
+    var csvTable = document.getElementById('csvTable');
+    var pdf = new jsPDF('p', 'pt', 'letter');
+    pdf.text('CSV Table', 40, 30);
+    pdf.autoTable({html: '#csvTable', startY: 50});
+    window.open(URL.createObjectURL(pdf.output("blob")));
+});
+
