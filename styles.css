@@ -1,0 +1,224 @@
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", "Arial", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://lh3.googleusercontent.com/d/1VwfM71ruMmg1vgBlXYUSoCTc8NzXdzyl");
+  min-height: 40%;
+  background-repeat: no-repeat;  
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo1, .logo2 {
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.60);
+    padding: 1px;
+    border-radius: 15px;
+    height: auto;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .logo1, .logo2 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .logo1, .logo2 {
+        max-width: 900px;
+    }
+}
+
+
+.text-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.w3-display-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-container span {
+    font-size: calc(2vw + 2vh + 2vmin);
+    color: white;
+}
+
+.menu {
+  display: none;
+}
+
+body {
+    background: #EDEDED;
+}
+
+#csvTable {
+    display: block;
+}
+
+#csvGallery {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: Black;
+    font-size: 1.5vw;
+}
+
+@media (max-width: 600px) {
+  th, td {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 100%) {
+  th, td {
+    font-size: 1.5vw;
+  }
+}
+
+.arrow {
+    user-select: none;
+    cursor: pointer;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #0f426a;
+    z-index: 1000;
+    color: #ffffff;
+}
+
+.selected {
+    background-color: lightgreen;
+}
+
+input[type=text], input[type=datetime-local] {
+    max-width: 500px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=datetime-local]:focus {
+    border: 5px solid #555;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+button {
+    font-weight: bold;
+    background-color: #add8e6;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #87ceeb;
+}
+
+button:active {
+    outline: none;
+    box-shadow: 0 0 0 2px #000;
+}
+
+table tr td:first-child input[type="checkbox"] {
+    display: none;
+}
+
+#csvGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.csvGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+    width: calc(33% - 10px);
+    border-radius: 15px; 
+}
+
+.card.selected {
+    background-color: lightgreen;
+}
+
+.card > div {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card > div > p {
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    align: center;
+    z-index: 999;
+    object-fit: scale-down;
+}
+#csvTable .thumbnail {
+    max-height: 180px;
+}
