@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CW</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 8am to 4pm</span>
+  </div>
+ <div class="w3-display-middle w3-center">
+    <div class="logo-container">
+        <img src="https://lh3.googleusercontent.com/d/1pycErU1dgRNfZEFXBJToLkj5mVqSkFjb" class="logo1">
+        <img src="https://lh3.googleusercontent.com/d/19bi1iNE8JYD1kVJ3nGH0YevbPh-sdQ9b" class="logo1">
+    </div>
+    <div class="text-container">
+        <span class="w3-text-white" >Simulation<br>Program</span>
+    </div>
+</div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">4500 Oak Street, Vancouver</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-large">
+      <!-- Links (sit on top) -->
+<div class="w3">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a id="toggleViewButton" class="w3-button w3-block w3-black">TOGGLE<br>VIEW</a>
+    </div>
+    <div class="w3-col s3">
+      <a id="clearSelectionButton" class="w3-button w3-block w3-black">CLEAR<br>SELECTION</a>
+    </div>
+    <div class="w3-col s3">
+      <a  id="reviewButton" class="w3-button w3-block w3-black">REVIEW<br>SELECTION</a>      
+    </div>
+    <div class="w3-col s3">
+      <a id="exportButton" class="w3-button w3-block w3-black"></a>
+    </div>
+  </div>
+</div>
+
+  
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:1200px">
+   
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Resources</div>
+      </a>
+<!--       <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');"> -->
+        <div class="w3-col s6 tablink">Accessories (coming soon)</div>
+      </a>
+    </div>
+<!-- Resources Tab -->
+    <div id="Eat" class="w3-container menu w3-padding w3-card">
+
+    <select id="categoryDropdown" multiple></select>
+    <select id="subcategoryDropdown" multiple></select>
+
+    <table id="csvTable">
+        <!-- The CSV data will be displayed here -->
+    </table>
+    <div id="csvGallery" style="display: none;">
+        <!-- The CSV data will be displayed here in gallery view -->
+    </div>
+    <script src="script.js"></script>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    <img src="https://lh3.googleusercontent.com/d/1VS3MFi4Vhg2PPvM6TD7zUi24WpfGKniw" style="width:100%;max-width:1200px" class="w3-margin-top"">
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+</body>
+</html>
